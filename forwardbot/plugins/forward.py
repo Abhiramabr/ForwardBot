@@ -142,8 +142,8 @@ async def handler(event):
             m=await event.respond("Trying Forwarding")
             fromchat = int(fromchannel)
             tochat = int(tochannel)
-            count = 3593
-            mcount = 991
+            count = 99999
+            mcount = 50000
             global MessageCount
             offset = int(offsetid)
             if offset:
@@ -157,7 +157,7 @@ async def handler(event):
                         if media_type(message) == type or type == 'All':
                             try:
                                 if media_type(message) == 'Document':
-                                    await client.send_file(tochat, message.document)
+                                    await client.send_file(tochat, message.document, caption=" 📽️𝗖𝗛𝗔𝗡𝗡𝗘𝗟 : @BoX_0fFiCe \n 📽️𝗖𝗛𝗔𝗡𝗡𝗘𝗟 : @MoviE_LinkS_0nlY \n 💠𝗚𝗥𝗢𝗨𝗣 : @MV_Mania")
                                     try:
                                         if len(str(message.file.name)) <= 95:
                                             print("Succesfully forwarded: " + str(message.file.name))
@@ -212,7 +212,7 @@ async def handler(event):
                         status.remove("1")
                         await m.edit(f"You have send {MessageCount} messages.\nWaiting for 10 minutes.")
                         await asyncio.sleep(600)
-                        mcount = 991
+                        mcount = 50000
                         print("Starting after 10 mins")
                         await m.edit("Starting after 10 mins")
                 else:
@@ -222,7 +222,7 @@ async def handler(event):
                     status.remove("1")
                     await m.edit(f"You have send {MessageCount} messages.\nWaiting for 1 hour.")
                     await asyncio.sleep(3600)
-                    count = 3593
+                    count = 99999
                     print("Starting after 1 hour")
                     await m.edit("Starting after 1 hour")
                     
